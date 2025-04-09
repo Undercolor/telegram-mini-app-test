@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Telegram Mini App</title>
+  <meta charset="UTF-8" />
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 40px; }
+    button { padding: 10px 20px; font-size: 16px; margin: 8px; }
+  </style>
+</head>
+<body>
+  <h2>Какой у тебя токен?</h2>
+  <button onclick="showResult('USDC')">USDC</button>
+  <button onclick="showResult('ETH')">ETH</button>
+  <p id="result" style="margin-top:20px;"></p>
+
+  <script>
+    Telegram.WebApp.ready();
+
+    function showResult(token) {
+      const res = document.getElementById('result');
+      if (token === 'USDC') {
+        res.innerText = 'Стабильная доходность, меньше рисков.';
+      } else {
+        res.innerText = 'Больше риск — больше потенциальный доход.';
+      }
+    }
+  </script>
+</body>
+</html>
