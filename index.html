@@ -9,9 +9,9 @@
   </style>
 </head>
 <body>
-  <h2>Какой у тебя токен?</h2>
-  <button onclick="showResult('USDC')">USDC</button>
-  <button onclick="showResult('ETH')">ETH</button>
+  <h2>Ты лох?</h2>
+  <button onclick="showResult('ДА')">ДА</button>
+  <button onclick="showResult('НЕТ')">НЕТ</button>
   <p id="result" style="margin-top:20px;"></p>
 
   <script>
@@ -19,10 +19,10 @@
 
     function showResult(token) {
       const res = document.getElementById('result');
-      if (token === 'USDC') {
-        res.innerText = 'Стабильная доходность, меньше рисков.';
+      if (token === 'ДА') {
+        res.innerText = 'Никто и не сомневался';
       } else {
-        res.innerText = 'Больше риск — больше потенциальный доход.';
+        res.innerText = 'Пиздёж';
       }
     }
   </script>
